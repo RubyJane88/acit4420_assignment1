@@ -19,8 +19,8 @@ class BankAccount:
         if 0 < amount <= self.balance:
             self.balance -= amount
             return True
-            print(f"Insufficient funds for withdrawal of {amount}. Current balance: {self.balance}")
-            return False
+        print(f"Insufficient funds")
+        return False
 
     def get_balance(self):
         return self.balance

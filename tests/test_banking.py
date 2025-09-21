@@ -9,7 +9,6 @@ from src.bank_account import BankAccount
 from src.savings_account import SavingsAccount
 from src.checking_account import CheckingAccount
 
-# Existing BankAccount tests (adjusted)
 def test_bank_account_initialization():
     account = BankAccount("Ruby Jane")
     assert account.account_holder == "Ruby Jane"

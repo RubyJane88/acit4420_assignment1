@@ -13,7 +13,6 @@ class CheckingAccount(BankAccount):
          total_deduction = amount + self.transaction_fee
          if self.balance >= total_deduction: 
             super().withdraw(total_deduction)
-            self.balance -= total_deduction
             print(f"Withdrew ${amount:.2f} + ${self.transaction_fee:.2f} fee. New balance: ${self.balance:.2f}")
          else:
              print("Insufficient funds for withdrawal and fee.")

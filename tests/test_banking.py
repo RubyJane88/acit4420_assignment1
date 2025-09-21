@@ -48,8 +48,8 @@ def test_bank_account_account_info(base_account):
     base_account.deposit(100.0)
     info = base_account.account_info()
     assert "Ruby Jane" in info
-    assert "$100.00" in info 
-
+    assert float(info.split("$")[1]) == 100.0
+    
 # SavingsAccount Tests
 def test_savings_account_initialization(savings_account):
     assert savings_account.account_holder == "Kairo"
